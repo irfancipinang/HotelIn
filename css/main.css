@@ -65,7 +65,7 @@ header {
 #mainNavbar .navToggler {
   display: none;
   border: none;
-  background: none;
+  background-color: var(--white);
   font-size: 2rem;
   color: var(--mainGray);
 }
