@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    z-index: 99;
+    position: fixed;
+    background-color: red;
+    width: 100%;
+}
+
+.kontainer{
+    margin: 0 5%;
+    max-width: 1400px;
+}
+
+@media (min-width: 1200px) {
+    .kontainer{
+        margin: auto;
+    }
+}
+
+.kontainer-fluid{
+    background-color: var(--white);
+}
+
+#mainNavbar{
+    padding: 20px 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        font-family: 'Raleway',sans-serif;
+        font-size: 1.2rem;
+    }
+    .navBrand{
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: #232323;
+        font-weight:900;
+
+        span{
+            color: var(--mainGray);
+        }
+    }
+
+    .navToggler{
+        display: none;
+        border: none;
+
+        font-size: 2rem;
+        color: var(--mainGray);
+    }
+
+    .navCollapse{
+        width: 40%;
+    
+        ul.navbar-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-btn{
+                background-color: #484848;
+                border-radius: 1rem;
+                padding: 10px 25px;
+
+            }
+
+            .nav-btn:hover{
+                background-color: #545454 ;
+            }
+        }
+    }
+
+    .dropDown{
+        display: none;
+        background-color: #fafafa;
+        border-radius: 0 0 20px 20px;
+        width: 100vw;
+        top: -300px;
+        position: absolute;
+        padding: 20px;
+        transition: top 1s;
+        z-index: -10;
+
+        ul.navbar-nav{
+            li.nav-item{
+                margin: 10px 0;
+            }
+
+            .nav-btn{
+                width: 100%;
+                background-color: var(--mainGray);
+            }
+        }
+
+    }
+    .open{
+        top: 100px;
+    }
+
+}
+
+//Untuk tablet
+@media screen and (max-width: 768px) {
+  #mainNavbar{
+    a{
+        font-size: 1rem;
+    }
+    .navCollapse{
+        width: 60%;
+    }
+  }
+}
+
+//Untuk handphone
+@media screen and (max-width: 576px) {
+  #mainNavbar{
+    .navCollapse{
+        display: none;
+
+        ul.navbar-nav{
+            flex-direction: column;
+        }
+    }
+
+    .dropDown{
+        display: block;
+        left: 0;
+    }
+
+    .navToggler{
+        display: block;
+    }
+  }
+}

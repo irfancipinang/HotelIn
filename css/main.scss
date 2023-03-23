@@ -1,0 +1,63 @@
+:root{
+    --mainGray: #484848;
+    --white: #E9E9E9;
+    --bintang: #FFDC00;
+}
+
+*,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: var(--white);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans&family=Poppins&family=Raleway:wght@400;800&family=Roboto&display=swap');
+
+//global
+@import 'component/navbar.scss';
+@import 'component/footer.scss';
+
+//landing page
+@import 'component/jumbotron.scss';
+@import 'component/slide.scss';
+@import 'component/why.scss';
+@import 'component/tester.scss';
+
+
+//login
+@import 'component/login.scss';
+
+//konten utama
+@import 'component/carousel-Jumbotron';
+@import 'component/hotel-card';
+
+//konten detail
+@import 'component/detail-gallery';
+@import 'component/detail-desc';
+
+
+//Untuk handphone
+@media screen and (max-width: 576px) {
+  .container{
+    max-width: 535px;
+  }
+}
+
+//Untuk tablet
+@media screen and (max-width: 768px) {
+  .container{
+    max-width: 650px;
+  }
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+}

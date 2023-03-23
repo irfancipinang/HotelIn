@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2c2ad9e412.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <header class="fixed-top">
+    <div class="kontainer-fluid w-100">
+      <nav id="mainNavbar" class="kontainer">
+        <a href="index.html" class="navBrand"><img src="../assets/brand.svg" alt=""></a>
+  
+        <button class="navToggler"  id="toggler">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+  
+        <div class="navCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign In</a></li>
+          
+          <li class="nav-item"><a href="daftar hotel.html" class="btn btn-secondary nav-btn">Booking <i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+  
+        <!-- dropdown -->
+        <div class="dropDown" id="navLinks">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign In</a></li>
+          
+          <li class="nav-item"><a href="daftar hotel.html" class="btn btn-secondary nav-btn">Booking <i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="header-main" class="kontainer">
+        <div class="jumbotron-hero">
+          <!-- <img src="../assets/jumbotron.png" class="img-fluid"> -->
+        </div>
+
+        <!-- Form pesan -->
+        <div class="row mb-5" data-aos="fade-up" data-aos-duration="500">
+          <div class="pesan col-12">
+            <h1 class="text-center d-block d-sm-none">Temukan Hotel Impianmu</h1>
+            <div class="input">
+                <select>
+                  <option  selected disabled>LOKASI</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+    
+                <select>
+                  <option  selected disabled>KATEGORI</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+  
+              <input type="date" placeholder="TANGGAL">
+            </div>
+  
+            <button class="btn btn-secondary" id="btnAlert">pesan sekarang</button>
+          </div>
+        </div>
+
+        <!-- Rekomendasi -->
+        <div class="row">
+          <div class="col-12 title">
+            <div class="text" data-aos="fade-right" data-aos-duration="500">
+              <p>Tipe kamar</p>
+              <h1>REKOMENDASI</p>
+            </div>
+
+            <div class="btnGroup">
+              <button class="button" id="scroll-left-btn"><i class="fa-solid fa-angle-left left"></i></button>
+              <button class="button" id="scroll-right-btn"><i class="fa-solid fa-angle-right right"></i></button>
+            </div>
+          </div>
+
+          <div class="col-12 sliders">
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Couple royal room</h2>
+                <p class="price">Rp. 700k ~ 1.200k / malam</p>
+              </div>
+            </div>
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Regular double bed</h2>
+                <p class="price">Rp. 300k ~ 900k / malam</p>
+              </div>
+            </div>
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Economic single bed</h2>
+                <p class="price">Rp. 200k ~ 500k / malam</p>
+              </div>
+            </div>
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Junior Suite Room</h2>
+                <p class="price">Rp. 800k ~ 2.700k / malam</p>
+              </div>
+            </div>
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Presidential Suite</h2>
+                <p class="price">Rp. 10jt ~ 50jt / malam</p>
+              </div>
+            </div>
+            <div class="hotel-card">
+              <div class="desc">
+                <h2 class="title">Family room</h2>
+                <p class="price">Rp. 200k ~ 500k / malam</p>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+
+        <!-- Mengapa memilih kami -->
+        <div class="row why">
+          <div class="col-12 why-title text-center">
+            <h1>MENGAPA MEMILIH KAMI</h1>
+          </div>
+          <div class="row list-container">
+            <div class="list">
+              <div class="list-item">
+                <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                <p class="text">proses cepat</p>
+              </div>
+              <div class="list-item">
+                <div class="icon"><i class="fa-light fa-solid fa-location-dot"></i></div>
+                <p class="text">dimana saja</p>
+              </div>
+              <div class="list-item">
+                <div class="icon"><i class="fa-sharp fa-solid fa-dollar-sign"></i></div>
+                <p class="text">harga terjangkau</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tester -->
+        <div class="row tester align-items-start justify-content-evenly">
+          <div class="col-12 col-md-6 text mx-3 mx-md-0">
+            <h1>Apa yang orang lain rasakan
+              setelah menggunakan layanan ini</h1>
+            <p>Mereka mengatakan apa yang mereka rasakan, kebanyakan dari mereka mengatakan bahwa mereka sangat puas,
+              apalagi puas karena penyediaan penginapan yang nyaman tidak ada
+              membayar banyak untuk mendapatkan semuanya</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="cqrousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="../assets/carausel_1.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="../assets/carausel_1.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="../assets/carausel_1.png" class="d-block w-100">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="kontainer">
+        <div class="footerBrand">
+          <img src="../assets/brand-footer.svg" class="align-self-center align-self-md-start" alt="">
+          <p>Temukan kenyamanan di setiap perjalananmu dengan TiketIn, solusi tepat pesan tiket hotelmu.</p>
+        </div>
+  
+        <div class="copyright">
+          <h2>Copyright © 2023 HotelIn. All Rights Reserved.</h2>
+        </div>
+  
+        <div class="sosmed">
+          <p>ikuti kami juga</p>
+          <div class="icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
