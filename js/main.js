@@ -7,12 +7,6 @@ toggleBtn.onclick = function(){
     dropDown.classList.toggle('open')
 };
 
-const btnAlert = document.querySelector('#btnAlert');
-
-btnAlert.onclick = function(){
-    alert('Terima kasih kak')
-};
-
 //scroll x
 const cardContainer = document.querySelector('.sliders');
 let isDown = false;
@@ -55,5 +49,32 @@ scrollRightBtn.addEventListener('click', () => {
     cardContainer.style.scrollBehavior = "smooth";
     cardContainer.scrollLeft = cardContainer.scrollWidth;
     cardContainer.style.scrollBehavior = "unset";
+});
+
+//link whatsApp
+function kirimPesan(namaHotel,jumlahKamar, jumlahMenginap, hargaPerMalam) {
+  //menghitung total harga
+  let totalHarga = jumlahKamar * hargaPerMalam * jumlahMenginap;
+  
+  let linkPesan = `https://api.whatsapp.com/send?phone=6281319630320&text=${encodeURIComponent(`
+  -------- HotelIn Checkout --------
+  
+Nama hotel          : ${namaHotel}
+Kamar yang dipesan  : ${jumlahKamar} kamar
+Waktu menginap      : ${jumlahMenginap} hari
+Total harga         : Rp. ${totalHarga},-
+
+-------- HotelIn Checkout --------
+  `)}`;
+  // return linkPesan;
+  window.location.href = linkPesan;
+}
+
+//tombol
+const btnAlert = document.querySelector('#btnAlert');
+
+btnAlert.addEventListener("click", function(){ 
+  kirimPesan('ayam goreng',1,3,500000);
+  // console.log('berhasil')
 });
 
