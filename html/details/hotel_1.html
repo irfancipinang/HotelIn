@@ -134,10 +134,73 @@
                 <!-- Harga dan tombol -->
                 <div class="harga-container">
                     <p class="harga">Rp 1.360.800 </p>
-                    <a href="" class="harga-btn">Pesan</a>
+                    <button class="harga-btn" id="pesanSekarang">Pesan</button>
                  </div>
             </div>
         </div>
+    </div>
+
+    <!-- pop up transaksi -->
+    <div class="checkout-container overlay" id="popup">
+      <div class="checkout">
+        <div class="checkout-header">
+          <h1>Checkout</h1>
+          <button class="exit" id="exit"><i class="fa-solid fa-xmark"></i></button>
+          <div class="detail-pemesanan">
+            <p>detail pemesanan</p>
+            <p>kode pemesanan : <span class="kode"></span></p>
+          </div>
+        </div>
+        <div class="checkout-body">
+          <input type="text" class="nama" placeholder="Nama lengkap">
+          <input type="text" class="notelp" placeholder="No.Telepon / email">
+
+          <div class="hitung-kamar">
+            <div class="kamar">
+              <p>kamar</p>
+              <div class="box">
+                <button class="kurang" id="kurangValueKamar">-</button>
+                <div class="angka angka-kamar">0</div>
+                <button class="tambah" id="tambahValueKamar">+</button>
+              </div>
+            </div>
+            
+            <div class="waktu-menginap">
+              <p>Waktu menginap (malam)</p>
+              <div class="box">
+                <button class="kurang" id="kurangValueWaktu">-</button>
+                <div class="angka angka-waktu">0</div>
+                <button class="tambah" id="tambahValueWaktu">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="keterangan">
+            <p class="judul">Keterangan :</p>
+            <div class="keterangan-list">
+              <div class="nama-keterangan">
+                <p>Nama Hotel</p>
+                <p>Harga Per Malam</p>
+                <p>Pajak</p>
+                <p>Diskon</p>
+              </div>
+              <div class="value-keterangan">
+                <p>Mulia Senayan Jakarta</p>
+                <p>Rp. 1.360.000,-</p>
+                <p class="pajak">Rp. 300.000</p>
+                <p>- Rp. 50.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-footer">
+          <div class="total-pembayaran">
+            <p>Total Pembayaran</p>
+            <h4 class="total">0</h4>
+          </div>
+          <button class="konfirmasi">Konfirmasi</button>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -177,6 +240,7 @@
   </script>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/checkout.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator Pertambahan Sederhana</title>
+  </head>
+  <body>
+    <label for="angka1">Angka Pertama:</label>
+    <input type="number" id="angka1" name="angka1"><br><br>
+    <label for="angka2">Angka Kedua:</label>
+    <input type="number" id="angka2" name="angka2"><br><br>
+    <label for="hasil">Hasil:</label>
+    <h1 type="text" id="hasil" name="hasil"></h1>
+    
+    <script>
+      const angka1 = document.getElementById("angka1");
+      const angka2 = document.getElementById("angka2");
+      const hasil = document.getElementById("hasil");
+
+      angka1.addEventListener("input", tambah);
+      angka2.addEventListener("input", tambah);
+
+      function tambah() {
+        const nilai1 = parseFloat(angka1.value) || 0;
+        const nilai2 = parseFloat(angka2.value) || 0;
+
+        hasil.innerHTML = nilai1 + nilai2;
+      }
+    </script>
+  </body>
+</html>

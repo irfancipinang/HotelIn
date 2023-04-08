@@ -262,6 +262,7 @@ main {
   margin-top: 100px !important;
 }
 main .jumbotron-hero {
+  display: none;
   width: 100%;
   border-radius: 20px;
   background-image: url(../assets/jumbotron.png);
@@ -341,6 +342,9 @@ main .pesan button:hover {
   }
 }
 @media screen and (max-width: 576px) {
+  main section .jumbotron-hero {
+    display: block;
+  }
   main section .jumbotron-hero img {
     width: 140%;
   }
@@ -1107,6 +1111,153 @@ main#kontenUtama .jumbotron .text-container .harga {
     padding: 1em 0;
     width: 100%;
     text-align: center;
+  }
+}
+.checkout-container {
+  position: absolute;
+  display: none;
+  top: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.checkout {
+  width: 100%;
+  min-width: 450px;
+  max-width: 500px;
+  position: absolute;
+  background-color: white;
+  top: 5%;
+  right: 32%;
+  padding: 20px 30px;
+}
+.checkout .checkout-header h1 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+.checkout .checkout-header .exit {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  height: 50px;
+  font-size: 2rem;
+}
+.checkout .checkout-header .detail-pemesanan {
+  border-bottom: 2px dashed #484848;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--mainGray);
+}
+.checkout .checkout-header .detail-pemesanan span {
+  font-family: "roboto", sans-serif;
+}
+.checkout .checkout-body {
+  margin-top: 90px;
+}
+.checkout .checkout-body input {
+  display: block;
+  margin: 30px 0;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #484848;
+  height: 40px;
+  padding-left: 5px;
+}
+.checkout .checkout-body .hitung-kamar {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout .checkout-body .hitung-kamar .kamar p, .checkout .checkout-body .hitung-kamar .waktu-menginap p {
+  display: block;
+}
+.checkout .checkout-body .hitung-kamar .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+.checkout .checkout-body .hitung-kamar .box .angka {
+  flex: 2;
+}
+.checkout .checkout-body .hitung-kamar .box .kurang, .checkout .checkout-body .hitung-kamar .box .tambah {
+  flex: 1;
+  background-color: #9e9e9e;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: 0.2s ease-out;
+}
+.checkout .checkout-body .hitung-kamar .box .kurang:hover, .checkout .checkout-body .hitung-kamar .box .tambah:hover {
+  background-color: #484848;
+  color: white;
+}
+.checkout .checkout-body .keterangan {
+  margin: 40px 0;
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  color: #9e9e9e;
+}
+.checkout .checkout-body .keterangan .judul {
+  color: var(--mainGray);
+}
+.checkout .checkout-body .keterangan .keterangan-list {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout .checkout-body .keterangan .keterangan-list .value-keterangan {
+  text-align: end;
+}
+.checkout .checkout-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout .checkout-footer .total-pembayaran p {
+  font-weight: 600;
+}
+.checkout .checkout-footer .total-pembayaran h4 {
+  font-family: "roboto", sans-serif;
+  font-size: 1.5rem;
+}
+.checkout .checkout-footer button {
+  padding: 15px 40px;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: var(--mainGray);
+}
+.checkout .checkout-footer button:hover {
+  background-color: #505050;
+}
+
+.open-popup {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .checkout {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .checkout {
+    left: 0;
   }
 }
 @media screen and (max-width: 576px) {

@@ -58,7 +58,7 @@ function kirimPesan(namaHotel,jumlahKamar, jumlahMenginap, hargaPerMalam) {
   
   let linkPesan = `https://api.whatsapp.com/send?phone=6281319630320&text=${encodeURIComponent(`
   -------- HotelIn Checkout --------
-  
+
 Nama hotel          : ${namaHotel}
 Kamar yang dipesan  : ${jumlahKamar} kamar
 Waktu menginap      : ${jumlahMenginap} hari
@@ -73,8 +73,9 @@ Total harga         : Rp. ${totalHarga},-
 //tombol
 const btnAlert = document.querySelector('#btnAlert');
 
-btnAlert.addEventListener("click", function(){ 
-  kirimPesan('ayam goreng',1,3,500000);
-  // console.log('berhasil')
-});
+// btnAlert.addEventListener("click", function(){ 
+//   kirimPesan('ayam goreng',1,3,500000);
+//   // console.log('berhasil')
+// });
 
+//--------------------- POP UP ------------------//
