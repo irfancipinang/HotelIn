@@ -57,12 +57,12 @@ tambahValueWaktu.addEventListener("click", () => {
 });
 
 let totalPembayaran;
-function menghitung() {
+function menghitung(permalam) {
   //menghitung
-  let hargaPerMalam = 1360000 * newValueWaktu,
+  let hargaPerMalam = 3308268 * newValueWaktu,
     hargaKamar = newValueKamar,
     pajak = hargaPerMalam * hargaKamar * 0.1,
-    diskon = 50000;
+    diskon = 30000;
   totalPembayaran = hargaPerMalam + pajak - diskon;
 
   //memanipulasi

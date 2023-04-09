@@ -1125,7 +1125,7 @@ main#kontenUtama .jumbotron .text-container .harga {
 
 .checkout {
   width: 100%;
-  min-width: 450px;
+  min-width: 350px;
   max-width: 500px;
   position: absolute;
   background-color: white;
@@ -1174,15 +1174,19 @@ main#kontenUtama .jumbotron .text-container .harga {
 .checkout .checkout-body .hitung-kamar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.checkout .checkout-body .hitung-kamar .kamar, .checkout .checkout-body .hitung-kamar .waktu-menginap {
+  width: 45%;
 }
 .checkout .checkout-body .hitung-kamar .kamar p, .checkout .checkout-body .hitung-kamar .waktu-menginap p {
-  display: block;
+  display: inline;
 }
 .checkout .checkout-body .hitung-kamar .box {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 200px;
+  min-width: 150px;
   height: 40px;
   text-align: center;
   font-size: 1.5rem;
