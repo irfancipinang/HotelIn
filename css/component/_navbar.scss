@@ -24,11 +24,13 @@ header{
 
 .kontainer-fluid{
     background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
 }
 
 #mainNavbar{
     padding: 20px 0;
-    height: 100px;
+    // height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,13 +39,9 @@ header{
         font-size: 1.2rem;
     }
     .navBrand{
-        text-decoration: none;
-        font-size: 2.5rem;
-        color: #232323;
-        font-weight:900;
-
-        span{
-            color: var(--mainGray);
+        img{
+            width: 100px;
+            height: auto;
         }
     }
 
@@ -86,7 +84,7 @@ header{
         top: -300px;
         position: absolute;
         padding: 20px;
-        transition: top 1s;
+        transition: top 0.5s ease-in-out;
         z-index: -10;
 
         ul.navbar-nav{
@@ -102,7 +100,7 @@ header{
 
     }
     .open{
-        top: 100px;
+        top: 70px;
     }
 
 }
@@ -128,6 +126,8 @@ header{
         ul.navbar-nav{
             flex-direction: column;
         }
+
+        
     }
 
     .dropDown{

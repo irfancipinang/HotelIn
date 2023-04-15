@@ -79,3 +79,10 @@ const btnAlert = document.querySelector('#btnAlert');
 // });
 
 //--------------------- POP UP ------------------//
+function showContent() {
+  let loading = document.querySelector('#loading');
+  loading.style.display = 'none';
+}
+
+// Menjalankan fungsi showContent() saat proses loading selesai
+window.addEventListener('load', showContent);
