@@ -258,7 +258,7 @@ body {
 }
 
 main {
-  margin-top: 100px !important;
+  margin-top: 90px !important;
 }
 main .jumbotron-hero {
   display: none;
@@ -283,7 +283,7 @@ main .pesan {
   height: 150px;
   transform: translateY(-75px);
   box-shadow: 0px -5px 10px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -380,6 +380,76 @@ main .pesan button:hover {
     border-radius: 1rem;
   }
 }
+.jumbotron {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(90deg, #484848 0%, rgba(72, 72, 72, 0.45) 99.03%), url(../assets/jumbotron.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jumbotron .jumbotron-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  color: white;
+}
+.jumbotron .jumbotron-text p {
+  font-family: "roboto", sans-serif;
+  letter-spacing: 0.25em;
+}
+.jumbotron .jumbotron-text h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.jumbotron .jumbotron-text .jumbotron-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+}
+.jumbotron .jumbotron-text .jumbotron-btn a {
+  color: var(--mainGray);
+  text-decoration: none;
+  background-color: white;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron .jumbotron-text {
+    width: 70%;
+  }
+  .jumbotron .jumbotron-text h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .jumbotron .jumbotron-text {
+    width: 90%;
+  }
+  .jumbotron .jumbotron-text p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+  .jumbotron .jumbotron-text h1 {
+    font-size: 1.2rem;
+  }
+  .jumbotron .jumbotron-text .jumbotron-btn {
+    flex-direction: column;
+    width: 250px;
+  }
+  .jumbotron .jumbotron-text .jumbotron-btn a:first-child {
+    margin-bottom: 20px;
+  }
+}
 *, p, body, html, h2 {
   margin: 0;
   padding: 0;
@@ -398,7 +468,7 @@ main .pesan button:hover {
 }
 .title .text h1 {
   font-family: "Raleway";
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 50px;
   margin: 0;
@@ -510,7 +580,7 @@ main .pesan button:hover {
     font-size: 1rem;
   }
   .title .text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .title .btnGroup button {
     width: 30px;
@@ -540,7 +610,7 @@ main .pesan button:hover {
     font-size: 1rem;
   }
   .title .text h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
   .title .btnGroup {
     display: flex;
@@ -678,7 +748,7 @@ main .pesan button:hover {
 }
 .login-container {
   width: 100%;
-  min-height: calc(100vh - 120px - 100px);
+  min-height: calc(100vh - 120px - 90px);
   display: flex;
   align-items: center;
   justify-content: center;
