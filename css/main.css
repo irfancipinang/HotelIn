@@ -432,15 +432,18 @@ main .pesan button:hover {
   }
 }
 @media screen and (max-width: 576px) {
+  .jumbotron {
+    height: 100vh;
+  }
   .jumbotron .jumbotron-text {
-    width: 90%;
+    width: 98%;
   }
   .jumbotron .jumbotron-text p {
     font-size: 0.7rem;
     margin-bottom: 10px;
   }
   .jumbotron .jumbotron-text h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   .jumbotron .jumbotron-text .jumbotron-btn {
     flex-direction: column;

@@ -228,14 +228,15 @@ main{
 //Untuk handphone
 @media screen and (max-width: 576px) {
   .jumbotron{
+    height: 100vh;
     .jumbotron-text{
-        width: 90%;
+        width: 98%;
         p{
             font-size: 0.7rem;
             margin-bottom: 10px;
         }
         h1{
-            font-size: 1.2rem;
+            font-size: 2rem;
         }
         .jumbotron-btn{
             flex-direction: column;
