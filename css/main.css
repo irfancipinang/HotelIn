@@ -434,6 +434,7 @@ main .pesan button:hover {
 @media screen and (max-width: 576px) {
   .jumbotron {
     height: 100vh;
+    margin-top: -90px;
   }
   .jumbotron .jumbotron-text {
     width: 98%;
