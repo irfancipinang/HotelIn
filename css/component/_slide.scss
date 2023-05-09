@@ -60,10 +60,19 @@
 
 .sliders{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     margin-top: 50px;
     transition: all 0.3s ease-in-out;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+    // animation-name: slide-otomatis;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .slider-inner{
+        display: flex;
+    }
 
     .hotel-card{
         width: 380px;
@@ -130,6 +139,15 @@
         background-size: cover;
         background-position-y: center;
         margin-right: 0;
+    }
+}
+
+@keyframes slide-otomatis {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
     }
 }
 

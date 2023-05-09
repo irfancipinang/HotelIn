@@ -18,9 +18,12 @@
             border: none;
             border-radius: 20px;
             margin: 25px calc(25px - 16px);
+            overflow: hidden;
+            
 
             img{
                 border-radius: 20px 20px 0 0 ;
+                transition: 0.2s ease-in;
             }
             .card-title{
                 font-size: 1.25rem;
@@ -70,6 +73,11 @@
                 .harga-btn:hover{
                     background-color: #545454;
                 }
+            }
+        }
+        .card-1:hover,.card-2:hover,.card-3:hover,.card-4:hover,.card-5:hover,.card-6:hover{
+            img{
+                transform: scale(1.02);
             }
         }
     }

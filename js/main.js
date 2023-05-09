@@ -51,6 +51,21 @@ scrollRightBtn.addEventListener('click', () => {
     cardContainer.style.scrollBehavior = "unset";
 });
 
+function autoScroll() {
+  cardContainer.style.scrollBehavior = "smooth";
+  cardContainer.scrollLeft = cardContainer.scrollWidth;
+  cardContainer.style.scrollBehavior = "unset";
+
+  setTimeout(()=>{
+    cardContainer.style.scrollBehavior = "smooth";
+    cardContainer.scrollLeft = 0;
+    cardContainer.style.scrollBehavior = "unset";
+  },2000)
+
+}
+setInterval(autoScroll, 4000);
+
+
 //link whatsApp
 function kirimPesan(namaHotel,jumlahKamar, jumlahMenginap, hargaPerMalam) {
   //menghitung total harga
@@ -86,3 +101,11 @@ function showContent() {
 
 // Menjalankan fungsi showContent() saat proses loading selesai
 window.addEventListener('load', showContent);
+
+//animasi teks
+var typing = new Typed(".text", {
+  strings: [ "nyaman!", "bersih!", "mudah!",],
+  typeSpeed: 100,
+  backSpeed: 40,
+  loop: true,
+});

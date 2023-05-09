@@ -9,30 +9,66 @@
     z-index: 9999999999999999999;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    .spinner{
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border-top: 3px solid #ffffff;
-        border-right: 3px solid transparent;
-        animation: spinner-rotate 0.6s linear infinite;
-    
+    .loading-ellipsis {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
     }
-    .loading-text{
-        color: white;
+    .loading-ellipsis div {
+      position: absolute;
+      top: 33px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: rgb(255, 255, 255);
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
     }
-    @keyframes spinner-rotate {
-        0% {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotate(360deg);
-        }
+    .loading-ellipsis div:nth-child(1) {
+      left: 8px;
+      animation: loading-ellipsis1 0.6s infinite;
+    }
+    .loading-ellipsis div:nth-child(2) {
+      left: 8px;
+      animation: loading-ellipsis2 0.6s infinite;
+    }
+    .loading-ellipsis div:nth-child(3) {
+      left: 32px;
+      animation: loading-ellipsis2 0.6s infinite;
+    }
+    .loading-ellipsis div:nth-child(4) {
+      left: 56px;
+      animation: loading-ellipsis3 0.6s infinite;
+    }
+    @keyframes loading-ellipsis1 {
+      0% {
+        transform: scale(0);
       }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes loading-ellipsis3 {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes loading-ellipsis2 {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(24px, 0);
+      }
+    }
+
+    .loading-text{
+      color: white;
+    }
 
 }

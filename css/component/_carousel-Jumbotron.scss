@@ -2,13 +2,15 @@ main#kontenUtama{
     .jumbotron{
         width: 100%;
         background: url(../assets/carousel-main/jumbotron.png);
-        background-size: cover;
+        background-size: 100%;
         background-repeat:no-repeat;
         border-radius: 20px;
         position: relative;
         padding-bottom: 0;
         height: 400px;
         margin-bottom: 90px;
+        overflow: hidden;
+        transition:0.2s ease-out;
 
         .overlay{
             background: linear-gradient(270deg, rgba(72, 72, 72, 0) 26.78%, #808080 59.28%);
@@ -22,7 +24,16 @@ main#kontenUtama{
             padding-left: 4rem;
             display: flex;
             align-items: center;
+            animation: jumbotron 0.5s ease-out;
+        }
 
+        @keyframes jumbotron {
+            0%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(0);
+            }
         }
 
         .text-container{
@@ -31,6 +42,7 @@ main#kontenUtama{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            transition: 0.2s ease-out;
             // align-items: center;
 
             div{
@@ -63,6 +75,13 @@ main#kontenUtama{
             }
         }
     }
+    .jumbotron:hover{
+        background-size: 102%;
+    }
+    .jumbotron:hover .overlay .text-container{
+        transform: translateX(10px);
+    }
+
 
 }
 

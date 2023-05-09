@@ -79,7 +79,6 @@ header{
     .dropDown{
         display: none;
         background-color: #fafafa;
-        border-radius: 0 0 20px 20px;
         width: 100vw;
         top: -300px;
         position: absolute;
@@ -100,7 +99,7 @@ header{
 
     }
     .open{
-        top: 70px;
+        top: 55px;
     }
 
 }
@@ -120,6 +119,7 @@ header{
 //Untuk handphone
 @media screen and (max-width: 576px) {
   #mainNavbar{
+    padding: 5px 0;
     .navCollapse{
         display: none;
 

@@ -13,14 +13,19 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/2c2ad9e412.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <div id="loading">
-    <div class="spinner"></div>
-    <p class="loading-text">sedang Loading...</p>
+    <div class="loading-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
   <header class="fixed-top">
     <div class="kontainer-fluid w-100">
@@ -61,9 +66,9 @@
     <div class="jumbotron container-fluid">
       <div class="jumbotron-text">
         <p>selamat datang di HotelIn</p>
-        <h1>Pesan Sekarang dan Segera Nikmati Pengalaman Menginap yang Nyaman!</h1>
+        <h1>Pesan Sekarang dan Segera Nikmati Pengalaman Menginap yang <span class="text"></span></h1>
         <div class="jumbotron-btn">
-          <a href="">PESAN SEKARANG</a>
+          <a href="./html/daftar hotel.html">PESAN SEKARANG</a>
           <a href="">HUBUNGI KAMI</a>
         </div>
       </div>
@@ -114,41 +119,43 @@
             </div>
           </div>
 
-          <div class="col-12 sliders">
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Couple royal room</h2>
-                <p class="price">Rp. 700k ~ 1.200k / malam</p>
+          <div class="col-12 sliders" onmouseenter="stopFunction()" onmouseleave="startFunction()">
+            <div class="slider-inner">
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Couple royal room</h2>
+                  <p class="price">Rp. 700k ~ 1.200k / malam</p>
+                </div>
               </div>
-            </div>
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Regular double bed</h2>
-                <p class="price">Rp. 300k ~ 900k / malam</p>
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Regular double bed</h2>
+                  <p class="price">Rp. 300k ~ 900k / malam</p>
+                </div>
               </div>
-            </div>
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Economic single bed</h2>
-                <p class="price">Rp. 200k ~ 500k / malam</p>
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Economic single bed</h2>
+                  <p class="price">Rp. 200k ~ 500k / malam</p>
+                </div>
               </div>
-            </div>
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Junior Suite Room</h2>
-                <p class="price">Rp. 800k ~ 2.700k / malam</p>
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Junior Suite Room</h2>
+                  <p class="price">Rp. 800k ~ 2.700k / malam</p>
+                </div>
               </div>
-            </div>
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Presidential Suite</h2>
-                <p class="price">Rp. 10jt ~ 50jt / malam</p>
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Presidential Suite</h2>
+                  <p class="price">Rp. 10jt ~ 50jt / malam</p>
+                </div>
               </div>
-            </div>
-            <div class="hotel-card">
-              <div class="desc">
-                <h2 class="title">Family room</h2>
-                <p class="price">Rp. 200k ~ 500k / malam</p>
+              <div class="hotel-card">
+                <div class="desc">
+                  <h2 class="title">Family room</h2>
+                  <p class="price">Rp. 200k ~ 500k / malam</p>
+                </div>
               </div>
             </div>
 

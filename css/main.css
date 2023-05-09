@@ -84,7 +84,6 @@ header {
 #mainNavbar .dropDown {
   display: none;
   background-color: #fafafa;
-  border-radius: 0 0 20px 20px;
   width: 100vw;
   top: -300px;
   position: absolute;
@@ -100,7 +99,7 @@ header {
   background-color: var(--mainGray);
 }
 #mainNavbar .open {
-  top: 70px;
+  top: 55px;
 }
 
 @media screen and (max-width: 768px) {
@@ -112,6 +111,9 @@ header {
   }
 }
 @media screen and (max-width: 576px) {
+  #mainNavbar {
+    padding: 5px 0;
+  }
   #mainNavbar .navCollapse {
     display: none;
   }
@@ -409,6 +411,12 @@ main .pesan button:hover {
   font-weight: 600;
   margin-bottom: 25px;
 }
+.jumbotron .jumbotron-text .text {
+  background-color: #ffffff;
+  padding: 1px 3px;
+  color: #484848;
+  border-radius: 20px 0 20px 0;
+}
 .jumbotron .jumbotron-text .jumbotron-btn {
   display: flex;
   justify-content: space-between;
@@ -510,10 +518,17 @@ main .pesan button:hover {
 
 .sliders {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   margin-top: 50px;
   transition: all 0.3s ease-in-out;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.sliders .slider-inner {
+  display: flex;
 }
 .sliders .hotel-card {
   width: 380px;
@@ -578,6 +593,14 @@ main .pesan button:hover {
   margin-right: 0;
 }
 
+@keyframes slide-otomatis {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @media screen and (max-width: 768px) {
   .title .text p {
     text-align: left;
@@ -820,13 +843,15 @@ main .pesan button:hover {
 main#kontenUtama .jumbotron {
   width: 100%;
   background: url(../assets/carousel-main/jumbotron.png);
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 20px;
   position: relative;
   padding-bottom: 0;
   height: 400px;
   margin-bottom: 90px;
+  overflow: hidden;
+  transition: 0.2s ease-out;
 }
 main#kontenUtama .jumbotron .overlay {
   background: linear-gradient(270deg, rgba(72, 72, 72, 0) 26.78%, #808080 59.28%);
@@ -839,6 +864,15 @@ main#kontenUtama .jumbotron .overlay {
   padding-left: 4rem;
   display: flex;
   align-items: center;
+  animation: jumbotron 0.5s ease-out;
+}
+@keyframes jumbotron {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 main#kontenUtama .jumbotron .text-container {
   width: 40%;
@@ -846,6 +880,7 @@ main#kontenUtama .jumbotron .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 0.2s ease-out;
 }
 main#kontenUtama .jumbotron .text-container div {
   margin-bottom: 25px;
@@ -872,6 +907,12 @@ main#kontenUtama .jumbotron .text-container .harga {
   font-family: "inter", sans-serif;
   font-size: 2.7rem;
   font-weight: 900;
+}
+main#kontenUtama .jumbotron:hover {
+  background-size: 102%;
+}
+main#kontenUtama .jumbotron:hover .overlay .text-container {
+  transform: translateX(10px);
 }
 
 @media screen and (max-width: 768px) {
@@ -930,9 +971,11 @@ main#kontenUtama .jumbotron .text-container .harga {
   border: none;
   border-radius: 20px;
   margin: 25px 9px;
+  overflow: hidden;
 }
 #kontenUtama .hotel-container .card img {
   border-radius: 20px 20px 0 0;
+  transition: 0.2s ease-in;
 }
 #kontenUtama .hotel-container .card .card-title {
   font-size: 1.25rem;
@@ -975,6 +1018,9 @@ main#kontenUtama .jumbotron .text-container .harga {
 }
 #kontenUtama .hotel-container .card .harga-container .harga-btn:hover {
   background-color: #545454;
+}
+#kontenUtama .hotel-container .card-1:hover img, #kontenUtama .hotel-container .card-2:hover img, #kontenUtama .hotel-container .card-3:hover img, #kontenUtama .hotel-container .card-4:hover img, #kontenUtama .hotel-container .card-5:hover img, #kontenUtama .hotel-container .card-6:hover img {
+  transform: scale(1.02);
 }
 
 @media screen and (min-width: 578px) and (max-width: 1200px) {
@@ -1349,29 +1395,65 @@ main#kontenUtama .jumbotron .text-container .harga {
   z-index: 10000000000000000000;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-#loading .spinner {
+#loading .loading-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+#loading .loading-ellipsis div {
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  top: 33px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  border-top: 3px solid #ffffff;
-  border-right: 3px solid transparent;
-  animation: spinner-rotate 0.6s linear infinite;
+  background: rgb(255, 255, 255);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+#loading .loading-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: loading-ellipsis1 0.6s infinite;
+}
+#loading .loading-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: loading-ellipsis2 0.6s infinite;
+}
+#loading .loading-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: loading-ellipsis2 0.6s infinite;
+}
+#loading .loading-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: loading-ellipsis3 0.6s infinite;
+}
+@keyframes loading-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loading-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }
 #loading .loading-text {
   color: white;
-}
-@keyframes spinner-rotate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 @media screen and (max-width: 576px) {
