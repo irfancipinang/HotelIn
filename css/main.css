@@ -435,9 +435,6 @@ main .pesan button:hover {
   .jumbotron .jumbotron-text {
     width: 70%;
   }
-  .jumbotron .jumbotron-text h1 {
-    font-size: 1.5rem;
-  }
 }
 @media screen and (max-width: 576px) {
   .jumbotron {
@@ -447,15 +444,9 @@ main .pesan button:hover {
   .jumbotron .jumbotron-text {
     width: 98%;
   }
-  .jumbotron .jumbotron-text p {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
-  }
-  .jumbotron .jumbotron-text h1 {
-    font-size: 2rem;
-  }
   .jumbotron .jumbotron-text .jumbotron-btn {
     flex-direction: column;
+    margin-top: 50px;
     width: 250px;
   }
   .jumbotron .jumbotron-text .jumbotron-btn a:first-child {
@@ -842,7 +833,7 @@ main .pesan button:hover {
 
 main#kontenUtama .jumbotron {
   width: 100%;
-  background: url(../assets/carousel-main/jumbotron.png);
+  background: url(../assets/carousel-main/jumbotron.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -918,6 +909,7 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
 @media screen and (max-width: 768px) {
   main#kontenUtama .jumbotron {
     height: 200px;
+    background-size: cover;
   }
   main#kontenUtama .jumbotron .text-container div {
     margin-bottom: 5px;
@@ -939,6 +931,8 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
 @media screen and (max-width: 576px) {
   main#kontenUtama .jumbotron {
     height: 150px;
+    margin-top: 0;
+    background-size: cover;
   }
   main#kontenUtama .jumbotron .text-container div {
     margin-bottom: 5px;

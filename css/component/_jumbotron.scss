@@ -224,9 +224,9 @@ main{
   .jumbotron{
     .jumbotron-text{
         width: 70%;
-        h1{
-            font-size: 1.5rem;
-        }
+        // h1{
+        //     font-size: 1.5rem;
+        // }
     }
   }
 }
@@ -238,15 +238,16 @@ main{
     margin-top: -90px;
     .jumbotron-text{
         width: 98%;
-        p{
-            font-size: 0.7rem;
-            margin-bottom: 10px;
-        }
-        h1{
-            font-size: 2rem;
-        }
+        // p{
+        //     font-size: 0.7rem;
+        //     margin-bottom: 10px;
+        // }
+        // h1{
+        //     font-size: 2rem;
+        // }
         .jumbotron-btn{
             flex-direction: column;
+            margin-top: 50px;
             width: 250px;
             a:first-child{
                 margin-bottom: 20px;

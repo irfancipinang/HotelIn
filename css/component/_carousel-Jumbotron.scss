@@ -1,7 +1,7 @@
 main#kontenUtama{
     .jumbotron{
         width: 100%;
-        background: url(../assets/carousel-main/jumbotron.png);
+        background: url(../assets/carousel-main/jumbotron.jpg);
         background-size: 100%;
         background-repeat:no-repeat;
         border-radius: 20px;
@@ -90,6 +90,7 @@ main#kontenUtama{
     main#kontenUtama{
         .jumbotron{
             height: 200px;
+            background-size: cover;
 
             .text-container{
                 div{
@@ -119,6 +120,8 @@ main#kontenUtama{
     main#kontenUtama{
         .jumbotron{
             height: 150px;
+            margin-top: 0;
+            background-size: cover;
     
             .text-container{
                 div{

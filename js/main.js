@@ -105,7 +105,7 @@ window.addEventListener('load', showContent);
 //animasi teks
 var typing = new Typed(".text", {
   strings: [ "nyaman!", "bersih!", "mudah!",],
-  typeSpeed: 100,
+  typeSpeed: 120,
   backSpeed: 40,
   loop: true,
 });
