@@ -1,7 +1,7 @@
 #detail{
     background-color: #ffffff;
     padding: 30px;
-    min-height: calc(100vh - 120px - 100px);
+    min-height: calc(100vh - 120px - 90px);
 
     .kembali a{
         font-size: 2.5rem;
@@ -97,7 +97,6 @@
                 }
                 p{
                     font-size: 0.75rem;
-                    letter-spacing: 2px;
                 }
             }
         }
@@ -109,7 +108,7 @@
             font-family: 'inter',sans-serif;
 
             .harga{
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: 700;
             }
 

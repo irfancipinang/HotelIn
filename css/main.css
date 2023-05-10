@@ -465,6 +465,7 @@ main .pesan button:hover {
 }
 .title .text {
   height: 60px;
+  transform: translateY(20px);
 }
 .title .text p {
   font-size: 1.25rem;
@@ -628,7 +629,7 @@ main .pesan button:hover {
     font-size: 1rem;
   }
   .title .text h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .title .btnGroup {
     display: flex;
@@ -1039,7 +1040,7 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
 #detail {
   background-color: #ffffff;
   padding: 30px;
-  min-height: calc(100vh - 120px - 100px);
+  min-height: calc(100vh - 120px - 90px);
 }
 #detail .kembali a {
   font-size: 2.5rem;
@@ -1130,7 +1131,6 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
 }
 #detail .deskripsi .fasilitas .fasilitas-list p {
   font-size: 0.75rem;
-  letter-spacing: 2px;
 }
 #detail .deskripsi .harga-container {
   display: flex;
@@ -1139,7 +1139,7 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
   font-family: "inter", sans-serif;
 }
 #detail .deskripsi .harga-container .harga {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 #detail .deskripsi .harga-container .harga-btn {
@@ -1246,6 +1246,8 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
   top: 5%;
   right: 32%;
   padding: 20px 30px;
+  transition: all 1s ease-in-out 0.5s;
+  transform: scale(0.5);
 }
 .checkout .checkout-header h1 {
   font-weight: 600;
@@ -1365,7 +1367,19 @@ main#kontenUtama .jumbotron:hover .overlay .text-container {
 }
 
 .open-popup {
-  display: block;
+  display: block !important;
+}
+.open-popup .checkout {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.close-popup {
+  display: none;
+}
+.close-popup .checkout {
+  transform: scale(0.5);
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {

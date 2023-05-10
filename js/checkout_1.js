@@ -56,6 +56,10 @@ tambahValueWaktu.addEventListener("click", () => {
   menghitung();
 });
 
+function formatAngka(number) {
+  return number.toLocaleString('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+}
+
 let totalPembayaran;
 function menghitung(permalam) {
   //menghitung
@@ -69,10 +73,14 @@ function menghitung(permalam) {
   let innerPajak = document.querySelector(".pajak"),
     innerTotalPembayaran = document.querySelector(".total");
 
-  innerPajak.innerHTML = `Rp. ${pajak}`;
-  innerTotalPembayaran.innerHTML = `Rp. ${totalPembayaran},-`;
+  innerPajak.innerHTML = `${formatAngka(pajak)}`;
+  innerTotalPembayaran.innerHTML = `${formatAngka(totalPembayaran)},-`;
+
+
   return totalPembayaran;
 }
+
+
 
 //link whatsApp
 function kirimPesan(namaHotel, jumlahKamar, jumlahMenginap, hargaPerMalam) {
@@ -86,10 +94,10 @@ kode pemesanan: ${randomNumber}
     
 Nama : ${nilaiInputNama}
 No. Telepon / Email : ${nilaiInputTelepon}
-Nama hotel          : ${namaHotel}
+Nama hotel          : Hotel Borobudur Indonesia
 Kamar yang dipesan  : ${newValueKamar} kamar
 Waktu menginap      : ${newValueWaktu} hari
-Total harga         : Rp. ${totalPembayaran},-
+Total harga         : ${formatAngka(totalPembayaran)},-
   
 -------- HotelIn Checkout --------
     `)}`;
@@ -118,8 +126,10 @@ var popUp = document.getElementById('popup')
 var closeBtn = document.getElementById('exit')
 
 pesan.addEventListener('click',()=>{
-  popUp.style.display = 'block';
+  popUp.classList.add('open-popup')
+  popUp.classList.remove('close-popup')
 })
 closeBtn.addEventListener('click',()=>{
-  popUp.style.display = 'none';
+  popUp.classList.remove('open-popup')
+  popUp.classList.add('close-popup')
 })

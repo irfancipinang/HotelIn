@@ -18,6 +18,8 @@
     top: 5%;
     right: 32%;
     padding: 20px 30px;
+    transition: all 1s ease-in-out 0.5s;
+    transform:scale(0.5);
 
     .checkout-header{
         h1{
@@ -144,7 +146,18 @@
 }
 
 .open-popup{
-    display: block;
+    display: block !important;
+    .checkout{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.close-popup{
+    display: none;
+    .checkout{
+        transform: scale(0.5);
+        opacity: 1;
+    }
 }
 
 //Untuk handphone

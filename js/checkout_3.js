@@ -56,6 +56,10 @@ tambahValueWaktu.addEventListener("click", () => {
   menghitung();
 });
 
+function formatAngka(number) {
+  return number.toLocaleString('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+}
+
 let totalPembayaran;
 function menghitung(permalam) {
   //menghitung
@@ -69,8 +73,8 @@ function menghitung(permalam) {
   let innerPajak = document.querySelector(".pajak"),
     innerTotalPembayaran = document.querySelector(".total");
 
-  innerPajak.innerHTML = `Rp. ${pajak}`;
-  innerTotalPembayaran.innerHTML = `Rp. ${totalPembayaran},-`;
+    innerPajak.innerHTML = `${formatAngka(pajak)}`;
+    innerTotalPembayaran.innerHTML = `${formatAngka(totalPembayaran)},-`;
   return totalPembayaran;
 }
 
@@ -86,10 +90,10 @@ kode pemesanan: ${randomNumber}
     
 Nama : ${nilaiInputNama}
 No. Telepon / Email : ${nilaiInputTelepon}
-Nama hotel          : ${namaHotel}
+Nama hotel          : Brits Hotel Legian
 Kamar yang dipesan  : ${newValueKamar} kamar
 Waktu menginap      : ${newValueWaktu} hari
-Total harga         : Rp. ${totalPembayaran},-
+Total harga         : ${formatAngka(totalPembayaran)},-
   
 -------- HotelIn Checkout --------
     `)}`;

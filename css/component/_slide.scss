@@ -9,6 +9,7 @@
 
     .text{
         height: 60px;
+        transform: translateY(20px);
        p{
         font-size: 1.25rem;
        } 
@@ -198,11 +199,13 @@
 @media screen and (max-width: 576px) {
     .title{
         .text{
+            
             p{
                 font-size: 1rem;
             }
             h1{
-                font-size: 1.2rem;
+                font-size: 1.5rem;
+                
             }
         }
 

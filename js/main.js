@@ -109,3 +109,5 @@ var typing = new Typed(".text", {
   backSpeed: 40,
   loop: true,
 });
+
+
