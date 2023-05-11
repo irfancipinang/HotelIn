@@ -1,0 +1,242 @@
+*,p,body,html,h2{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+
+    .text{
+        height: 60px;
+        transform: translateY(20px);
+       p{
+        font-size: 1.25rem;
+       } 
+       h1{
+        font-family: 'Raleway';
+        font-size: 2rem;
+        font-weight: 700;
+        line-height:50px;
+        margin: 0;
+        color: var(--mainGray);
+       }
+    }
+
+    .btnGroup{
+        button{
+            border: none;
+            background-color: var(--mainGray);
+            width: 50px;
+            height: 50px;
+            font-size: 2em;
+            color: white;
+
+            i{
+                transition: all 0.3s ease-out;
+            }
+        }
+
+        .button:nth-child(1){
+            border-radius: 0.3em 0 0 0.3em;
+            margin-right: 8px;
+        }
+        .button:nth-child(2){
+            border-radius: 0 0.3em 0.3em 0;
+            margin-left: 8px;
+        }
+
+        button:hover i.left{
+            transform: translateX(-3px);
+        }
+        button:hover i.right{
+            transform: translateX(3px);
+        }
+    }
+}
+
+.sliders::-webkit-scrollbar{
+    display: none;
+}
+
+.sliders{
+    display: flex;
+    overflow-x: hidden;
+    margin-top: 50px;
+    transition: all 0.3s ease-in-out;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    // animation-name: slide-otomatis;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .slider-inner{
+        display: flex;
+    }
+
+    .hotel-card{
+        width: 380px;
+        height: 398px;
+        margin-right: 110px;
+        flex: 0 0 auto;
+        border-radius: 20px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        cursor: pointer;
+
+        .desc{
+            width: 100%;
+            height: 25%;
+            background-color: #484848D9;
+            color: white;
+            padding: 25px 30px;
+            font-family: 'Poppins',sans-serif;
+            transition: all 0.3s ease-out;
+
+            h2{
+                font-size: 1.5rem;
+                font-weight:500;
+            }
+            p{
+                font-size: 1rem;
+                color: #b7b7b7;
+            }
+        }
+    }
+
+    .hotel-card:hover .desc{
+        height: 30%;
+    }
+
+    .hotel-card:nth-child(1){
+        background: url(../assets/slider/tipe_1.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .hotel-card:nth-child(2){
+        background: url(../assets/slider/tipe_2.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .hotel-card:nth-child(3){
+        background: url(../assets/slider/tipe_3.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .hotel-card:nth-child(4){
+        background: url(../assets/slider/tipe_4.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .hotel-card:nth-child(5){
+        background: url(../assets/slider/tipe_5.png);
+        background-size: cover;
+        background-position-y: center;
+    }
+    .hotel-card:nth-child(6){
+        background: url(../assets/slider/tipe_6.png);
+        background-size: cover;
+        background-position-y: center;
+        margin-right: 0;
+    }
+}
+
+@keyframes slide-otomatis {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+//Untuk tablet
+@media screen and (max-width: 768px) {
+    .title{
+        .text{
+            p{
+                text-align: left;
+                font-size: 1rem;
+            }
+            h1{
+                font-size: 2rem;
+            }
+        }
+
+        .btnGroup{
+            button{
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .sliders{
+        margin-top: 30px;
+        .hotel-card{
+            width: 40vw;
+            height: 200px;
+            margin-right: 50px;
+
+            .desc{
+                padding: 8px 20px;
+                h2{
+                    font-size: 1rem;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+//Untuk handphone
+@media screen and (max-width: 576px) {
+    .title{
+        .text{
+            
+            p{
+                font-size: 1rem;
+            }
+            h1{
+                font-size: 1.5rem;
+                
+            }
+        }
+
+        .btnGroup{
+            display: flex;
+            button{
+                width: 25px;
+                height: 25px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .sliders{
+        .hotel-card{
+            min-width: 225px;
+            width: 40vw;
+            height: 200px;
+            margin-right: 30px;
+
+            .desc{
+                height: 30%;
+                padding: 10px 10px;
+                h2{
+                    font-size: 1rem;
+                }
+
+                p{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}

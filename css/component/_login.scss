@@ -1,0 +1,78 @@
+.login-container{
+    width: 100%;
+    min-height: calc(100vh - 120px - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div.login{
+        width: 30%;
+        min-width: 415px;
+        max-width: 440px;
+        height: auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 15px 0;
+
+        img.login-brand{
+            margin-bottom: 80px;
+            margin-top: 20px;
+        }
+
+        .form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 80%;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid #484848;
+                background: none;
+            }
+            input:focus{
+                outline: none;
+            }
+
+            input[type='password']{
+                margin-bottom: 50px;
+            }
+
+            .or{
+                margin: 15px 0;
+            }
+
+            button{
+                width: 100%;
+                padding: 7px 0;
+                margin-bottom: 15px;
+                border: none;
+                color: white;
+            }
+
+            button:nth-child(1){
+                background-color: var(--mainGray);
+            }
+            button:nth-child(2){
+                background-color: #868686;
+            }
+            // button:nth-child(3){
+
+            // }
+            button:nth-child(4){
+                background-color: #de473c;
+            }
+            button:nth-child(5){
+                background-color: #4267B2;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,147 @@
+main#kontenUtama{
+    .jumbotron{
+        width: 100%;
+        background: url(../assets/carousel-main/jumbotron.jpg);
+        background-size: 100%;
+        background-repeat:no-repeat;
+        border-radius: 20px;
+        position: relative;
+        padding-bottom: 0;
+        height: 400px;
+        margin-bottom: 90px;
+        overflow: hidden;
+        transition:0.2s ease-out;
+
+        .overlay{
+            background: linear-gradient(270deg, rgba(72, 72, 72, 0) 26.78%, #808080 59.28%);
+            background-size: cover;
+            background-repeat:no-repeat;
+            position: absolute;
+            // background-color: red;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 0 0 20px;
+            padding-left: 4rem;
+            display: flex;
+            align-items: center;
+            animation: jumbotron 0.5s ease-out;
+        }
+
+        @keyframes jumbotron {
+            0%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+
+        .text-container{
+            width: 40%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 0.2s ease-out;
+            // align-items: center;
+
+            div{
+                margin-bottom: 25px;
+            }
+
+            .judul{
+                font-family: 'raleway', sans-serif;
+                font-size: 2.7rem;
+                font-weight: 800;
+            }
+            .stars{
+                font-size: 1rem;
+                color: var(--bintang);
+
+            }
+            .lokasi{
+                font-family: 'roboto',sans-serif;
+                font-size: 0.75rem;
+                font-weight: 100;
+                display: flex;
+                i{
+                    margin-right: 10px;
+                }
+            }
+            .harga{
+                font-family: 'inter',sans-serif;
+                font-size: 2.7rem;
+                font-weight: 900;
+            }
+        }
+    }
+    .jumbotron:hover{
+        background-size: 102%;
+    }
+    .jumbotron:hover .overlay .text-container{
+        transform: translateX(10px);
+    }
+
+
+}
+
+//Untuk tablet
+@media screen and (max-width: 768px) {
+    main#kontenUtama{
+        .jumbotron{
+            height: 200px;
+            background-size: cover;
+
+            .text-container{
+                div{
+                    margin-bottom: 5px;
+                }
+
+                .judul{
+                    font-size: 1.2rem;
+                }
+                .stars{
+                    font-size: 0.8rem;
+                    margin-top: -5px;
+                }
+                .lokasi{
+                    font-size: 0.45rem;
+                }
+                .harga{
+                    font-size: 1.5rem;
+                }
+            }
+          } 
+    }
+}
+
+//Untuk handphone
+@media screen and (max-width: 576px) {
+    main#kontenUtama{
+        .jumbotron{
+            height: 150px;
+            margin-top: 0;
+            background-size: cover;
+    
+            .text-container{
+                div{
+                    margin-bottom: 5px;
+                }
+    
+                .judul{
+                    font-size: 1rem;
+                }
+                .stars{
+                    font-size: 0.8rem;
+                    margin-top: -5px;
+                }
+                .lokasi{
+                    font-size: 0.3rem;
+                }
+                .harga{
+                    font-size: 1rem;
+                }
+            }
+        } 
+    }
+}

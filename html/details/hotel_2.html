@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>HotelIn</title>
+  <link rel="shortcut icon" href="../../assets/brand.svg">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2c2ad9e412.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <style>
+      .gambar{
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+      }
+      .gambar:nth-child(1){
+          background-image: url(../../assets/gallery/hotel_2/gambar_1.webp);
+          background-position-x:left;
+      }
+      .gambar:nth-child(2){
+          background-image: url(../../assets/gallery/hotel_2/gambar_2.webp);
+      }
+      .gambar:nth-child(3){
+          background-image: url(../../assets/gallery/hotel_2/gambar_3.webp);
+      }
+      .gambar:nth-child(4){
+          background-image: url(../../assets/gallery/hotel_2/gambar_4.webp);
+      }
+  </style>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <div class="kontainer-fluid w-100">
+      <nav id="mainNavbar" class="kontainer">
+        <a href="../../index.html" class="navBrand"><img src="../../assets/brand.svg" alt=""></a>
+  
+        <button class="navToggler"  id="toggler">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+  
+        <div class="navCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="../login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign In</a></li>
+          
+          <li class="nav-item"><a href="../daftar hotel.html" class="btn btn-secondary nav-btn">Booking <i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+  
+        <!-- dropdown -->
+        <div class="dropDown" id="navLinks">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="../login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign In</a></li>
+          
+          <li class="nav-item"><a href="../daftar hotel.html" class="btn btn-secondary nav-btn">Booking <i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-sm container-lg-fluid" id="detail">
+        <div class="kembali">
+            <a href="../daftar hotel.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+
+        <div class="konten row">
+            <div class="gallery col-12 col-lg-6">
+                <div class="gambar"></div>
+                <div class="gambar"></div>
+                <div class="gambar"></div>
+                <div class="gambar"></div>
+            </div>
+            <div class="deskripsi col-12 col-lg-6">
+                <!-- Judul dan rating -->
+                <div class="title-container">
+                    <h1 class="title">Millennium Hotel Sirih Jakarta</h1>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Lokasi -->
+                <div class="lokasi-container">
+                    <h4>Lokasi</h4>
+                    <div class="lokasi">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <p>Jl. H. Fachrudin No.3, Kp. Bali, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+                    </div>
+                </div>
+
+                <!-- Fasilitas -->
+                <div class="fasilitas-container">
+                  <h4>Fasilitas</h4>
+                    <div class="fasilitas">
+                        <div class="fasilitas-list">
+                            <i class="fa-solid fa-water-ladder"></i>
+                            <p>Kolam renang</p>
+                        </div>
+                        <div class="fasilitas-list">
+                            <i class="fa-solid fa-wifi"></i>
+                            <p>Wifi</p>
+                        </div>
+                        <div class="fasilitas-list">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Restoran</p>
+                        </div>
+                        <div class="fasilitas-list">
+                            <i class="fa-sharp fa-solid fa-store"></i>
+                            <p>Minimarket</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harga dan tombol -->
+                <div class="harga-container">
+                    <p class="harga">Rp 994.620</p>
+                    <button class="harga-btn" id="pesanSekarang">Pesan</button>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- pop up transaksi -->
+        <div class="checkout-container overlay" id="popup">
+          <div class="checkout">
+            <div class="checkout-header">
+              <h1>Checkout</h1>
+              <button class="exit" id="exit"><i class="fa-solid fa-xmark"></i></button>
+              <div class="detail-pemesanan">
+                <p>detail pemesanan</p>
+                <p>kode pemesanan : <span class="kode"></span></p>
+              </div>
+            </div>
+            <div class="checkout-body">
+              <input type="text" class="nama" placeholder="Nama lengkap">
+              <input type="text" class="notelp" placeholder="No.Telepon / email">
+    
+              <div class="hitung-kamar">
+                <div class="kamar">
+                  <p>kamar</p>
+                  <div class="box">
+                    <button class="kurang" id="kurangValueKamar">-</button>
+                    <div class="angka angka-kamar">0</div>
+                    <button class="tambah" id="tambahValueKamar">+</button>
+                  </div>
+                </div>
+                
+                <div class="waktu-menginap">
+                  <p>Waktu menginap</p>
+                  <div class="box">
+                    <button class="kurang" id="kurangValueWaktu">-</button>
+                    <div class="angka angka-waktu">0</div>
+                    <button class="tambah" id="tambahValueWaktu">+</button>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="keterangan">
+                <p class="judul">Keterangan :</p>
+                <div class="keterangan-list">
+                  <div class="nama-keterangan">
+                    <p>Nama Hotel</p>
+                    <p>Harga Per Malam</p>
+                    <p>Pajak</p>
+                    <p>Diskon</p>
+                  </div>
+                  <div class="value-keterangan">
+                    <p>Millennium Hotel Sirih Jakarta</p>
+                    <p>Rp. 994.620,-</p>
+                    <p class="pajak">Rp. 0</p>
+                    <p>- Rp. 50.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-footer">
+              <div class="total-pembayaran">
+                <p>Total Pembayaran</p>
+                <h4 class="total">0</h4>
+              </div>
+              <button class="konfirmasi">Konfirmasi</button>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <footer>
+    <div class="kontainer">
+      <div class="footerBrand">
+        <img src="../../assets/brand-footer.svg" class="align-self-center align-self-md-start" alt="">
+        <p>Temukan kenyamanan di setiap perjalananmu dengan TiketIn, solusi tepat pesan tiket hotelmu.</p>
+      </div>
+  
+      <div class="copyright">
+        <h2>Copyright © 2023 HotelIn. All Rights Reserved.</h2>
+      </div>
+  
+      <div class="sosmed">
+        <p>ikuti kami juga</p>
+        <div class="icon">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/checkout_2.js"></script>
+</body>
+
+</html>

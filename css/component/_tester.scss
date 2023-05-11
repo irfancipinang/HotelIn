@@ -1,0 +1,46 @@
+.tester{
+  margin-bottom: 150px;
+    .text{
+    h1{
+        font-weight: 700;
+        color: var(--mainGray);
+        margin-bottom: 50px;
+    }
+
+    p{
+        color: #808080;
+        font-weight: 400;
+    }
+    }
+
+}
+
+//Untuk tablet
+@media screen and (max-width: 768px) {
+    .tester{
+      .text{
+      h1{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+  }
+    }
+}
+
+//Untuk handphone
+@media screen and (max-width: 576px) {
+  .text{
+      h1{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    p{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+  }
+}
