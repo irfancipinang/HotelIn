@@ -29,13 +29,30 @@ kurangValueKamar.addEventListener("click", () => {
   valueKamar.innerHTML = newValueKamar;
 
   menghitung();
+  disableButtonKamar()
 });
 tambahValueKamar.addEventListener("click", () => {
   newValueKamar++;
   valueKamar.innerHTML = newValueKamar;
 
   menghitung();
+  disableButtonKamar()
 });
+
+function disableButtonKamar() {
+  if (newValueKamar <= 0) {
+    kurangValueKamar.disabled = true;
+  }else{
+    kurangValueKamar.disabled = false;
+  }
+}
+function disableButtonWaktu() {
+  if (newValueWaktu <= 0) {
+    kurangValueWaktu.disabled = true;
+  }else{
+    kurangValueWaktu.disabled = false;
+  }
+}
 
 //fungsi tombol waktu menginap
 let kurangValueWaktu = document.getElementById("kurangValueWaktu");
@@ -48,12 +65,14 @@ kurangValueWaktu.addEventListener("click", () => {
   valueWaktu.innerHTML = newValueWaktu;
 
   menghitung();
+  disableButtonWaktu()
 });
 tambahValueWaktu.addEventListener("click", () => {
   newValueWaktu++;
   valueWaktu.innerHTML = newValueWaktu;
 
   menghitung();
+  disableButtonWaktu()
 });
 
 function formatAngka(number) {

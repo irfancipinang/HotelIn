@@ -126,10 +126,9 @@ var popUp = document.getElementById('popup')
 var closeBtn = document.getElementById('exit')
 
 pesan.addEventListener('click',()=>{
-  popUp.classList.add('open-popup')
-  popUp.classList.remove('close-popup')
+  popUp.style.display = 'block';
+  popUp.style.position = 'fixed';
 })
 closeBtn.addEventListener('click',()=>{
-  popUp.classList.remove('open-popup')
-  popUp.classList.add('close-popup')
+  popUp.style.display = 'none';
 })
