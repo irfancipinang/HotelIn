@@ -35,7 +35,7 @@ header {
 
 @media (min-width: 1200px) {
   .kontainer {
-    margin: auto;
+    margin: 0 5%;
   }
 }
 .kontainer-fluid {
